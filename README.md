@@ -1,4 +1,4 @@
-Button animation made for j3c code challange.
+Button animation made for j3c code challenge.
 
 ## Installation
 - npm install
