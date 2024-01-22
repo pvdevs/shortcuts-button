@@ -13,6 +13,22 @@
   color: white;
 }
 
+@keyframes spin {
+  0%,
+  100% {
+    border-color: var(--color-main);
+  }
+  25% {
+    border-color: var(--color-main-second);
+  }
+  50% {
+    border-color: var(--color-main-third);
+  }
+  75% {
+    border-color: var(--color-main-second);
+  }
+}
+
 .btn {
   display: inline-block;
   height: 5.5rem;
@@ -53,32 +69,10 @@
     border: 2px solid #a474ff;
     border-radius: 999rem;
     overflow: hidden;
+  }
 
-    &-layer {
-      position: absolute;
-      display: block;
-      bottom: 0;
-      left: 50%;
-      translate: -50%;
-      border-radius: 999rem 999rem 0 0;
-      border: none;
-      width: 120%;
-      height: 200%;
-      z-index: 20;
-      transform: translateY(100%) translateX(0);
-
-      &-first {
-        background-color: var(--color-main);
-      }
-
-      &-second {
-        background-color: var(--color-main-second);
-      }
-
-      &-third {
-        background-color: var(--color-main-third);
-      }
-    }
+  &:hover .btn-bg {
+    animation: spin 2s linear normal;
   }
 
   &:hover &-text-out {
